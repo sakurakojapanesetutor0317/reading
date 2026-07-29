@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>あつい ひ - Reading Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f7f4ef;
+    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
+    color: #2b2f36;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 14mm;
+    background: #f7f4ef;
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .banner {
+    background: linear-gradient(135deg, #223148, #2c3e50);
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  .banner h1 {
+    margin: 0 0 6px 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .banner .sub {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .pill {
+    background: #e8944a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #4a90d9;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card p { margin: 0 0 14px 0; font-size: 16px; line-height: 1.7; }
+  .card p:last-child { margin-bottom: 0; }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #223148;
+    margin: 0 0 6px 0;
+  }
+  .section-title .en { font-weight: 700; }
+  .rule {
+    height: 3px;
+    background: #e8944a;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .q-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-card .q-text { font-size: 16px; margin-bottom: 12px; }
+  .q-card .q-text b { color: #223148; margin-right: 4px; }
+  .q-line {
+    border-bottom: 1.5px dotted #c7ccd3;
+    height: 18px;
+  }
+
+  .talk-panel {
+    background: #eaf2fb;
+    border: 1px solid #d7e6f7;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 22px;
+  }
+  .talk-panel .section-title { color: #2c5c8f; margin-bottom: 14px; }
+  .talk-panel .prompt { font-size: 15.5px; margin-bottom: 8px; }
+  .talk-panel .input-box {
+    background: #ffffff;
+    border: 1px solid #cfd9e6;
+    border-radius: 8px;
+    height: 34px;
+    margin-bottom: 18px;
+  }
+  .talk-panel .input-box:last-child { margin-bottom: 0; }
+
+  .translation-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #3aa876;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .translation-card p { margin: 0 0 12px 0; font-size: 15.5px; line-height: 1.65; }
+  .translation-card p.title-line { font-style: italic; color: #556; margin-bottom: 16px; }
+  .translation-card p:last-child { margin-bottom: 0; }
+
+  .page-number {
+    position: absolute;
+    bottom: 10mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #9aa1ab;
+  }
+
+  @media print {
+    body { background: #f7f4ef; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="banner">
+    <div>
+      <h1>あつい ひ</h1>
+      <div class="sub">Reading Practice</div>
+    </div>
+    <div class="pill">☀️ 7月</div>
+  </div>
+
+  <div class="card">
+    <p>きょうは ７がつです。</p>
+    <p>まいにち とても あついです。</p>
+    <p>アレックスさんは にほんに います。</p>
+    <p>きょうの あさ、ともだちと こうえんに いきました。</p>
+    <p>でも、とても あつかったです。</p>
+    <p>ふたりは「あついですね。」と はなしました。</p>
+    <p>それから、コンビニに いきました。</p>
+    <p>つめたい おちゃと アイスを かいました。</p>
+    <p>うちに かえりました。</p>
+    <p>エアコンを つけました。</p>
+    <p>つめたい おちゃを のみました。</p>
+    <p>よるは ともだちと はなびを みます。</p>
+    <p>とても たのしみです。</p>
+  </div>
+
+  <div class="page-number">1</div>
+</div>
+
+<div class="page">
+  <div class="section-title">📝 <span class="en">読解問題 (Reading Comprehension)</span></div>
+  <div class="rule"></div>
+
+  <div class="q-card">
+    <div class="q-text"><b>1.</b> きょうは なんがつですか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>2.</b> あさ、だれと どこに いましたか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>3.</b> コンビニで なにを かいましたか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>4.</b> よるは なにを みますか。</div>
+    <div class="q-line"></div>
+  </div>
+
+  <div class="talk-panel">
+    <div class="section-title">💬 Let's Talk (はなしましょう)</div>
+    <div class="prompt">あなたの くには あついですか。</div>
+    <div class="input-box"></div>
+    <div class="prompt">なつに なにを しますか。</div>
+    <div class="input-box"></div>
+  </div>
+
+  <div class="page-number">2</div>
+</div>
+
+<div class="page">
+  <div class="section-title">🌐 <span class="en">English Translation</span></div>
+  <div class="rule"></div>
+
+  <div class="translation-card">
+    <p class="title-line">A Hot Day</p>
+    <p>Today is July.</p>
+    <p>It is very hot every day.</p>
+    <p>Alex is in Japan.</p>
+    <p>This morning, I went to the park with a friend.</p>
+    <p>However, it was very hot.</p>
+    <p>The two of them talked, saying, "It's hot, isn't it?"</p>
+    <p>After that, they went to a convenience store.</p>
+    <p>They bought cold tea and ice cream.</p>
+    <p>They returned home.</p>
+    <p>They turned on the air conditioner.</p>
+    <p>They drank cold tea.</p>
+    <p>At night, they will watch fireworks with a friend.</p>
+    <p>They are looking forward to it very much.</p>
+  </div>
+
+  <div class="page-number">3</div>
+</div>
+
+</body>
+</html>
