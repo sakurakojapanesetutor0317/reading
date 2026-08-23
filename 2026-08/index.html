@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>August Reading Collection — Japanese Reading Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f7f4ef;
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    color: #2b2f36;
+  }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #556;
+    text-decoration: none;
+    margin-bottom: 18px;
+  }
+  .back-link:hover { color: #223148; }
+
+  .hero {
+    background: linear-gradient(135deg, #223148, #2c3e50);
+    border-radius: 18px;
+    padding: 48px 44px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 44px;
+  }
+  .hero .pill {
+    display: inline-block;
+    background: #e8944a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+  }
+  .hero h1 {
+    margin: 0 0 12px 0;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+  }
+  .hero p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.7;
+    max-width: 640px;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero .deco {
+    position: absolute;
+    right: -30px;
+    bottom: -40px;
+    font-size: 150px;
+    opacity: 0.12;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #e8944a;
+    margin: 0 0 8px 2px;
+  }
+  .section-heading {
+    font-size: 22px;
+    font-weight: 800;
+    color: #223148;
+    margin: 0 0 24px 2px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34,49,72,0.12);
+  }
+  .card .thumb {
+    width: 100%;
+    aspect-ratio: 700 / 433;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .card .thumb.placeholder {
+    background: linear-gradient(135deg, #eaf2fb, #f7f4ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+  .card .body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.2px;
+  }
+  .tag.level {
+    background: #eaf2fb;
+    color: #2c5c8f;
+  }
+  .tag.format {
+    background: #fdeee0;
+    color: #b35f1c;
+  }
+  .card h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #223148;
+  }
+  .card .jp-title {
+    font-size: 13.5px;
+    color: #8b93a0;
+    margin-top: -6px;
+  }
+  .card p.desc {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #556;
+    flex: 1;
+  }
+  .card .cta {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #223148;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: fit-content;
+    transition: background 0.15s ease;
+  }
+  .card .cta:hover { background: #34495e; }
+
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    font-size: 13px;
+    color: #9aa1ab;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <a href="../index.html" class="back-link">← Back to Archive</a>
+
+  <div class="hero">
+    <div class="pill">☀️ August 2026</div>
+    <h1>August Reading Collection</h1>
+<p>Three short Japanese reading passages about Obon, a traditional Japanese holiday in August. Learn about returning home, visiting family graves, and spending time with family.</p>
+<div class="deco">🏮</div>
+  </div>
+
+  <div class="section-label">This month's set</div>
+  <div class="section-heading">Choose a reading</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img class="thumb" src="hakamairi1.jpg" alt="Obon preview">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Beginner</span>
+          <span class="tag format">Hiragana only</span>
+        </div>
+<h3>Obon Holiday</h3>
+<div class="jp-title">おぼんやすみ</div>
+<p class="desc">A simple story about Obon — a traditional Japanese holiday when ancestors return home and families spend time together. Written entirely in hiragana, perfect for early learners.</p>
+        <a class="cta" href="level1.html">Open worksheet →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="thumb" src="hakamairi2.jpg" alt="Obon with kanji preview">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Beginner+</span>
+          <span class="tag format">Kanji + furigana</span>
+        </div>
+<h3>Obon Grave Visit</h3>
+        <div class="jp-title">お盆のお墓参り</div>
+        <p class="desc">A story about taking the Shinkansen back to your hometown for Obon, visiting family graves with relatives, and enjoying summer together, featuring kanji and furigana readings.</p>
+        <a class="cta" href="level2.html">Open worksheet →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="thumb" src="hakamairi3.jpg" alt="Obon preview">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Intermediate</span>
+          <span class="tag format">Kanji + furigana</span>
+        </div>
+<h3>Obon and Family Time in Japan</h3>
+<div class="jp-title">日本のお盆と家族の時間</div>
+<p class="desc">A longer story about the Japanese Obon holiday, returning to the family home, visiting a family grave, and remembering loved ones. Includes reading comprehension questions and an English translation.</p>
+        <a class="cta" href="level3.html">Open worksheet →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Japanese Reading Practice · August 2026</footer>
+
+</div>
+
+</body>
+</html>
