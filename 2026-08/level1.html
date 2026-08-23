@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>おぼんやすみ- Reading Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f7f4ef;
+    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
+    color: #2b2f36;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 14mm;
+    background: #f7f4ef;
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .banner {
+    background: linear-gradient(135deg, #223148, #2c3e50);
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  .banner h1 {
+    margin: 0 0 6px 0;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .banner .sub {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .pill {
+    background: #e8944a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #4a90d9;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card p { margin: 0 0 14px 0; font-size: 16px; line-height: 1.7; }
+  .card p:last-child { margin-bottom: 0; }
+
+.vocabulary-card {
+  background: #ffffff;
+  border: 1px solid #f1dfc2;
+  border-left: 4px solid #e6a23c;
+  border-radius: 10px;
+  padding: 20px 26px;
+    margin-top: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.vocabulary-card .title-line {
+  margin: 0 0 16px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #b87518;
+}
+
+.vocabulary-card p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.vocabulary-card .word {
+  color: #d4861f;
+  font-weight: 700;
+}
+.vocabulary-card p:last-child {
+  margin-bottom: 0;
+}
+.new-word {
+  color: #d4861f;
+  font-weight: 700;
+}
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #223148;
+    margin: 0 0 6px 0;
+  }
+  .section-title .en { font-weight: 700; }
+  .rule {
+    height: 3px;
+    background: #e8944a;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+
+  .q-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-card .q-text { font-size: 16px; margin-bottom: 12px; }
+  .q-card .q-text b { color: #223148; margin-right: 4px; }
+  .q-line {
+    border-bottom: 1.5px dotted #c7ccd3;
+    height: 18px;
+  }
+
+  .talk-panel {
+    background: #eaf2fb;
+    border: 1px solid #d7e6f7;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 22px;
+  }
+  .talk-panel .section-title { color: #2c5c8f; margin-bottom: 14px; }
+  .talk-panel .prompt { font-size: 15.5px; margin-bottom: 8px; }
+  .talk-panel .input-box {
+    background: #ffffff;
+    border: 1px solid #cfd9e6;
+    border-radius: 8px;
+    height: 34px;
+    margin-bottom: 18px;
+  }
+  .talk-panel .input-box:last-child { margin-bottom: 0; }
+
+  .translation-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #3aa876;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .translation-card p { margin: 0 0 12px 0; font-size: 15.5px; line-height: 1.65; }
+  .translation-card p.title-line { font-style: italic; color: #556; margin-bottom: 16px; }
+  .translation-card p:last-child { margin-bottom: 0; }
+
+  .page-number {
+    position: absolute;
+    bottom: 10mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #9aa1ab;
+  }
+
+  @media print {
+    body { background: #f7f4ef; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="banner">
+    <div>
+      <h1>おぼんやすみ</h1>
+      <div class="sub">Reading Practice</div>
+    </div>
+    <div class="pill">☀️ 8月</div>
+  </div>
+<div style="text-align: center;"> 
+  <img src="hakamairi.jpg" alt="お墓参りのイラスト" style="display: block; margin: 0 auto; width: 100%; max-width: 685px; height: auto; border: 1px solid #ececec;; border-radius: 12px; padding: 1px; background: #ffffff;">
+</div>
+
+<div class="vocabulary-card">
+  <p class="title-line">New Words</p>
+  <p><span class="word">ごせんぞさま</span> — ancestors (family members who died)</p>
+  <p><span class="word">かえってきます</span> — come back / return home</p>
+  <p><span class="word">じっか</span> — parents' home / family home</p>
+  <p><span class="word">おはか</span> — grave</p>
+  <p><span class="word">そうじします</span> — clean</p>
+</div>
+
+<div class="card">
+  <p>８がつです。</p>
+  <p>にほんでは、おぼんやすみが あります。</p>
+  <p>おぼんは かぞくの たいせつな ひです。</p>
+  <p>おぼんには、<span class="new-word">ごせんぞさま</span>が うちに <span class="new-word">かえってきます</span>。</p>
+  <p>たなかさんは しんかんせんで  <span class="new-word">じっか</span>に かえります。</p>
+  <p>かぞくと ごはんを たべます。</p>
+  <p>スイカ🍉も たべます。</p>
+  <p>いっしょに <span class="new-word">おはか</span>に いきます。</p>
+  <p><span class="new-word">おはか</span>を <span class="new-word">そうじします</span>。</p>
+  <p>それから、かぞくと はなします。</p>
+  <p>おぼんは かぞくの たいせつな じかんです。</p>
+</div>
+
+
+  <div class="page-number">1</div>
+</div>
+
+<div class="page">
+  <div class="section-title">📝 <span class="en">もんだい (Reading Comprehension)</span></div>
+  <div class="rule"></div>
+
+  <div class="q-card">
+    <div class="q-text"><b>1.</b> きょうは なんがつですか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>2.</b> なにでかえりますか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>3.</b> かぞくとどこにいきますか。</div>
+    <div class="q-line"></div>
+  </div>
+  <div class="q-card">
+    <div class="q-text"><b>4.</b> おはかでなにをしますか。</div>
+    <div class="q-line"></div>
+  </div>
+
+  <div class="talk-panel">
+    <div class="section-title">💬 Let's Talk (はなしましょう)</div>
+    <div class="prompt">なつに なにを たべますか。</div>
+    <div class="input-box"></div>
+    <div class="prompt">８がつに なにを しますか。</div>
+    <div class="input-box"></div>
+  </div>
+
+  <div class="page-number">2</div>
+</div>
+
+<div class="page">
+  <div class="section-title">🌐 <span class="en">English Translation</span></div>
+  <div class="rule"></div>
+
+<div class="translation-card">
+  <p class="title-line">Obon Holiday</p>
+  <p>It is August.</p>
+  <p>In Japan, there is an Obon holiday.</p>
+  <p>Obon is an important time for families.</p>
+  <p>During Obon, ancestors return home.</p>
+  <p>Mr. Tanaka returns to his family home by bullet train.</p>
+  <p>He eats a meal with his family.</p>
+  <p>They also eat watermelon.</p>
+  <p>They go to the grave together.</p>
+  <p>They clean the grave.</p>
+  <p>After that, they talk with their family.</p>
+  <p>Obon is an important time for families.</p>
+</div>
+
+  <div class="page-number">3</div>
+</div>
+
+</body>
+</html>

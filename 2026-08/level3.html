@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本のお盆と家族の時間 - Reading Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f7f4ef;
+    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
+    color: #2b2f36;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 16mm 14mm;
+    background: #f7f4ef;
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  .banner {
+    background: linear-gradient(135deg, #223148, #2c3e50);
+    border-radius: 14px;
+    padding: 22px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  .banner h1 {
+    margin: 0 0 6px 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .banner .sub {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.85;
+  }
+  .pill {
+    background: #e8944a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .illustration {
+    margin-bottom: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    line-height: 0;
+  }
+  .illustration img {
+    width: 100%;
+    display: block;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #4a90d9;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card p { margin: 0; font-size: 16px; line-height: 3; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 11px;
+    color: #e74c3c;
+    font-weight: 700;
+  }
+.vocabulary-card {
+  background: #ffffff;
+  border: 1px solid #f1dfc2;
+  border-left: 4px solid #e6a23c;
+  border-radius: 10px;
+  padding: 20px 26px;
+    margin-top: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.vocabulary-card .title-line {
+  margin: 0 0 16px 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: #b87518;
+}
+
+.vocabulary-card p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.vocabulary-card .word {
+  color: #d4861f;
+  font-weight: 700;
+}
+.vocabulary-card p:last-child {
+  margin-bottom: 0;
+}
+.new-word {
+  color: #d4861f;
+  font-weight: 700;
+}
+
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #223148;
+    margin: 0 0 6px 0;
+  }
+  .section-title .en { font-weight: 700; }
+  .rule {
+    height: 3px;
+    background: #e8944a;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+
+  .q-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .q-card .q-text { font-size: 15px; margin-bottom: 6px; }
+  .q-card .q-text b { color: #223148; margin-right: 4px; }
+  .q-line {
+    border-bottom: 1.5px dotted #c7ccd3;
+    height: 12px;
+  }
+
+  .talk-panel {
+    background: #eaf2fb;
+    border: 1px solid #d7e6f7;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-top: 12px;
+  }
+  .talk-panel .section-title { color: #2c5c8f; margin-bottom: 8px; font-size: 18px; }
+  .talk-panel .prompt { font-size: 14.5px; margin-bottom: 5px; }
+  .talk-panel .input-box {
+    background: #ffffff;
+    border: 1px solid #cfd9e6;
+    border-radius: 8px;
+    height: 26px;
+    margin-bottom: 10px;
+  }
+  .talk-panel .input-box:last-child { margin-bottom: 0; }
+
+  .translation-card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-left: 4px solid #3aa876;
+    border-radius: 10px;
+    padding: 22px 26px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .translation-card p { margin: 0 0 12px 0; font-size: 15.5px; line-height: 1.7; }
+  .translation-card p:last-child { margin-bottom: 0; }
+
+  .page-number {
+    position: absolute;
+    bottom: 10mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 12px;
+    color: #9aa1ab;
+  }
+
+  @media print {
+    body { background: #f7f4ef; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="banner">
+    <div>
+      <h1><ruby>日本<rt>にほん</rt></ruby>のお<ruby>盆<rt>ぼん</rt></ruby>と<ruby>家族<rt>かぞく</rt></ruby>の<ruby>時間<rt>じかん</rt></ruby></h1>
+      <div class="sub">Reading Practice</div>
+    </div>
+    <div class="pill">☀️ 8月</div>
+  </div>
+<div style="text-align: center;"> 
+  <img src="hakamairi.jpg" alt="お墓参りのイラスト" style="display: block; margin: 0 auto; width: 100%; max-width: 685px; height: auto; border: 1px solid #ececec;; border-radius: 12px; padding: 1px; background: #ffffff;">
+</div>
+
+<div class="vocabulary-card">
+  <p class="title-line">New Words</p>
+  <p><span class="word">お<ruby>盆休<rt>ぼんやす</rt></ruby>み</span> — Obon holiday / Obon break</p>
+  <p><span class="word">ご<ruby>先祖様<rt>せんぞさま</rt></ruby></span> — ancestors (family members who died)</p>
+  <p><span class="word"><ruby>帰<rt>かえ</rt></ruby>ってきます</span> — come back / return home</p>
+  <p><span class="word"><ruby>集<rt>あつ</rt></ruby>まります</span> — gather</p>
+  <p><span class="word"><ruby>実家<rt>じっか</rt></ruby></span> — parents' home / family home</p>
+  <p><span class="word">お<ruby>墓<rt>はか</rt></ruby></span> — grave</p>
+  <p><span class="word">お<ruby>墓参<rt>はかまい</rt></ruby>り</span> — visiting a grave</p>
+  <p><span class="word"><ruby>墓花<rt>はかばな</rt></ruby></span> — flowers for a grave</p>
+  <p><span class="word"><ruby>菊<rt>きく</rt></ruby></span> — chrysanthemum</p>
+  <p><span class="word"><ruby>百合<rt>ゆり</rt></ruby></span> — lily</p>
+  <p><span class="word"><ruby>掃除<rt>そうじ</rt></ruby>します</span> — clean</p>]
+  <p><span class="word"><ruby>混<rt>こ</rt></ruby>みます</span> — be crowded</p>
+  <p><span class="word"><ruby>飾<rt>かざ</rt></ruby>ります</span> — decorate / put up</p>
+  <p><span class="word"><ruby>親切<rt>しんせつ</rt></ruby></span> — kind</p>
+  <p><span class="word"><ruby>昔<rt>むかし</rt></ruby></span> — long ago / in the past</p>
+</div>
+
+<div class="card">
+  <p>
+    <ruby>今日<rt>きょう</rt></ruby>は8<ruby>月<rt>がつ</rt></ruby>10<ruby>日<rt>にち</rt></ruby>です。<ruby>毎日<rt>まいにち</rt></ruby>とても<ruby>暑<rt>あつ</rt></ruby>いですが、<ruby>明日<rt>あした</rt></ruby>からお<ruby>盆休<rt>ぼんやす</rt></ruby>みです。<br>
+    <ruby>日本<rt>にほん</rt></ruby>では、お<ruby>盆<rt>ぼん</rt></ruby>にご<ruby>先祖様<rt>せんぞさま</rt></ruby>が<ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ってきます。<br>
+    ですから、お<ruby>盆休<rt>ぼんやす</rt></ruby>みには、<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごす<ruby>人<rt>ひと</rt></ruby>がたくさんいます。<br>
+    <ruby>田中<rt>たなか</rt></ruby>さんも、<ruby>今年<rt>ことし</rt></ruby>は<ruby>東京<rt>とうきょう</rt></ruby>から<ruby>実家<rt>じっか</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>ります。<br>
+    <ruby>新幹線<rt>しんかんせん</rt></ruby>で<ruby>帰<rt>かえ</rt></ruby>りますから、<ruby>駅<rt>えき</rt></ruby>にはたぶんとても<ruby>混<rt>こ</rt></ruby>んでいると<ruby>思<rt>おも</rt></ruby>います。<br>
+    <ruby>実家<rt>じっか</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたら、まず<ruby>家族<rt>かぞく</rt></ruby>に「ただいま」と<ruby>言<rt>い</rt></ruby>います。<br>
+    <ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>家族<rt>かぞく</rt></ruby>に<ruby>会<rt>あ</rt></ruby>いますから、みんなといろいろ<ruby>話<rt>はな</rt></ruby>したいです。<br>
+    <ruby>次<rt>つぎ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby>は、<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>にお<ruby>墓参<rt>はかまい</rt></ruby>りに<ruby>行<rt>い</rt></ruby>きます。<br>
+    お<ruby>墓参<rt>はかまい</rt></ruby>りの<ruby>前<rt>まえ</rt></ruby>に、<ruby>花屋<rt>はなや</rt></ruby>さんに<ruby>行<rt>い</rt></ruby>って、お<ruby>墓<rt>はか</rt></ruby>に<ruby>飾<rt>かざ</rt></ruby>る<ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>います。<br>
+    <ruby>田中<rt>たなか</rt></ruby>さんのおじいちゃんは、<ruby>百合<rt>ゆり</rt></ruby>の<ruby>花<rt>はな</rt></ruby>が<ruby>大好<rt>だいす</rt></ruby>きでした。<br>
+    だから、<ruby>白<rt>しろ</rt></ruby>い<ruby>百合<rt>ゆり</rt></ruby>と<ruby>菊<rt>きく</rt></ruby>の<ruby>花<rt>はな</rt></ruby>を<ruby>選<rt>えら</rt></ruby>びます。<br>
+    <ruby>花屋<rt>はなや</rt></ruby>さんはとても<ruby>親切<rt>しんせつ</rt></ruby>で、<ruby>花<rt>はな</rt></ruby>についていろいろ<ruby>教<rt>おし</rt></ruby>えてくれました。<br>
+    <ruby>花<rt>はな</rt></ruby>を<ruby>買<rt>か</rt></ruby>ったあとで、みんなでお<ruby>墓<rt>はか</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます。<br>
+    お<ruby>墓<rt>はか</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>して、<ruby>花<rt>はな</rt></ruby>を<ruby>飾<rt>かざ</rt></ruby>ります。<br>
+    そして、ご<ruby>先祖様<rt>せんぞさま</rt></ruby>にあいさつをします。<br>
+    お<ruby>墓参<rt>はかまい</rt></ruby>りのあとで、<ruby>家<rt>いえ</rt></ruby>に<ruby>帰<rt>かえ</rt></ruby>って、みんなでご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べます。<br>
+そして、スイカに<ruby>塩<rt>しお</rt></ruby>をかけて<ruby>食<rt>た</rt></ruby>べます。<br>
+    <ruby>夜<rt>よる</rt></ruby>は、<ruby>家族<rt>かぞく</rt></ruby>と<ruby>昔<rt>むかし</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>て、おじいちゃんの<ruby>話<rt>はなし</rt></ruby>をします。<br>
+    <ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごすことができて、とても<ruby>楽<rt>たの</rt></ruby>しかったです。
+  </p>
+</div>
+
+  <div class="page-number">1</div>
+</div>
+
+<div class="page">
+  <div class="section-title">📝 <span class="en">もんだい (Reading Comprehension)</span></div>
+  <div class="rule"></div>
+
+<div class="q-card">
+  <div class="q-text"><b>1.</b> <ruby>実家<rt>じっか</rt></ruby>に<ruby>着<rt>つ</rt></ruby>いたら、まず<ruby>何<rt>なに</rt></ruby>をしますか。</div>
+  <div class="q-line"></div>
+</div>
+
+<div class="q-card">
+  <div class="q-text"><b>2.</b> お<ruby>墓参<rt>はかまい</rt></ruby>りの<ruby>前<rt>まえ</rt></ruby>に、<ruby>何<rt>なに</rt></ruby>をしますか。</div>
+  <div class="q-line"></div>
+</div>
+
+<div class="q-card">
+  <div class="q-text"><b>3.</b> どうして<ruby>白<rt>しろ</rt></ruby>い<ruby>百合<rt>ゆり</rt></ruby>と<ruby>菊<rt>きく</rt></ruby>の<ruby>花<rt>はな</rt></ruby>を<ruby>選<rt>えら</rt></ruby>びますか。</div>
+  <div class="q-line"></div>
+</div>
+
+<div class="q-card">
+  <div class="q-text"><b>4.</b> お<ruby>墓<rt>はか</rt></ruby>で<ruby>何<rt>なに</rt></ruby>をしますか。</div>
+  <div class="q-line"></div>
+</div>
+
+<div class="q-card">
+  <div class="q-text"><b>5.</b> お<ruby>墓参<rt>はかまい</rt></ruby>りのあとで、<ruby>家族<rt>かぞく</rt></ruby>は<ruby>何<rt>なに</rt></ruby>をしますか。</div>
+  <div class="q-line"></div>
+</div>
+
+<div class="talk-panel">
+  <div class="section-title">💬 Let's Talk (はなしましょう)</div>
+  <div class="prompt">
+    <ruby>長<rt>なが</rt></ruby>い<ruby>休<rt>やす</rt></ruby>みがあったら、<ruby>何<rt>なに</rt></ruby>をしたいですか。
+  </div>
+  <div class="input-box"></div>
+
+  <div class="prompt">
+    <ruby>久<rt>ひさ</rt></ruby>しぶりに<ruby>家族<rt>かぞく</rt></ruby>に<ruby>会<rt>あ</rt></ruby>ったら、<ruby>何<rt>なに</rt></ruby>をしたいですか。
+  </div>
+  <div class="input-box"></div>
+
+  <div class="prompt">
+    あなたの<ruby>家族<rt>かぞく</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごすとき、いつも<ruby>何<rt>なに</rt></ruby>をしますか。
+  </div>
+  <div class="input-box"></div>
+</div>
+
+
+  <div class="page-number">2</div>
+</div>
+
+<div class="page">
+  <div class="section-title">🌐 <span class="en">English Translation</span></div>
+  <div class="rule"></div>
+
+<div class="translation-card">
+<p>Today is August 10.</p>
+  <p>It is very hot every day, but the Obon holiday starts tomorrow.</p>
+  <p>In Japan, people believe that ancestors return home during Obon.</p>
+  <p>So, many people spend the Obon holiday with their families.</p>
+  <p>Ms. Tanaka is also going back to her family home from Tokyo this year.</p>
+  <p>She is going home by bullet train, so the station will probably be very crowded.</p>
+  <p>When she arrives at her family home, she will first say, "I'm home," to her family.</p>
+  <p>She hasn't seen her family for a long time, so she wants to talk with them about many things.</p>
+  <p>The next day, she is going to visit the family grave with her family.</p>
+  <p>Before visiting the grave, they will go to a flower shop and buy flowers to put on the grave.</p>
+  <p>Mr. Tanaka's grandfather loved lilies.</p>
+  <p>So, she will choose white lilies and chrysanthemums.</p>
+  <p>The florist is very kind and tells him many things about the flowers.</p>
+  <p>After buying the flowers, they will go to the grave together.</p>
+  <p>They will clean the grave and put the flowers on it.</p>
+  <p>Then, they will greet their ancestors.</p>
+  <p>After visiting the grave, they will go home and eat a meal together.</p>
+  <p>Because it is a hot day, they will also eat watermelon.</p>
+  <p>At night, they will look at old photos with their family and talk about their grandfather.</p>
+  <p>She is very happy to spend time with her family again after a long time.</p>
+</div>
+
+  <div class="page-number">3</div>
+</div>
+
+</body>
+</html>
+
