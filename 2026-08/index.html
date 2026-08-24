@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>August Reading Collection — Japanese Reading Practice!</title>
+<title>August Reading Collection — Japanese Reading Practice</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;600;700;800&display=swap');
 
@@ -14,6 +14,7 @@
     background: #f7f4ef;
     font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
     color: #2b2f36;
+    padding: 20px;
   }
 
   .wrap {
@@ -31,7 +32,32 @@
     margin-bottom: 18px;
   }
   .back-link:hover { color: #223148; }
+.back-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #e8944a;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* 上下に適度な隙間をあける（1行分＋α） */
+  margin-top: 10px;
+  margin-bottom: 20px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.back-pill:hover {
+  opacity: 0.9;
+}
 
+.back-pill .icon {
+  font-size: 14px;
+}
   .hero {
     background: linear-gradient(135deg, #223148, #2c3e50);
     border-radius: 18px;
@@ -196,9 +222,13 @@
 </head>
 <body>
 
-<div class="wrap">
 
-  <a href="../index.html" class="back-link">← Back to Archive</a>
+
+<a href="../index.html" class="back-pill">
+  <span class="icon">☚</span> Back to Home
+</a>
+
+<div class="wrap">
 
   <div class="hero">
     <div class="pill">☀️ August 2026</div>
@@ -262,3 +292,4 @@
 
 </body>
 </html>
+
