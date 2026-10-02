@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>September Reading Collection — Japanese Reading Practice</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Sans:wght@400;500;600;700;800&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: #f7f4ef;
+    font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+    color: #2b2f36;
+    padding: 20px;
+  }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #556;
+    text-decoration: none;
+    margin-bottom: 18px;
+  }
+  .back-link:hover { color: #223148; }
+.back-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #e8944a;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  /* 上下に適度な隙間をあける（1行分＋α） */
+  margin-top: 10px;
+  margin-bottom: 20px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.back-pill:hover {
+  opacity: 0.9;
+}
+
+.back-pill .icon {
+  font-size: 14px;
+}
+  .hero {
+    background: linear-gradient(135deg, #223148, #2c3e50);
+    border-radius: 18px;
+    padding: 48px 44px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 44px;
+  }
+  .hero .pill {
+    display: inline-block;
+    background: #e8944a;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+  }
+  .hero h1 {
+    margin: 0 0 12px 0;
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+  }
+  .hero p {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.7;
+    max-width: 640px;
+    color: rgba(255,255,255,0.85);
+  }
+  .hero .deco {
+    position: absolute;
+    right: -30px;
+    bottom: -40px;
+    font-size: 150px;
+    opacity: 0.12;
+    line-height: 1;
+    user-select: none;
+  }
+
+  .section-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #e8944a;
+    margin: 0 0 8px 2px;
+  }
+  .section-heading {
+    font-size: 22px;
+    font-weight: 800;
+    color: #223148;
+    margin: 0 0 24px 2px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .card {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(34,49,72,0.12);
+  }
+  .card .thumb {
+    width: 100%;
+    aspect-ratio: 700 / 433;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .card .thumb.placeholder {
+    background: linear-gradient(135deg, #eaf2fb, #f7f4ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+  .card .body {
+    padding: 20px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+  .tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.2px;
+  }
+  .tag.level {
+    background: #eaf2fb;
+    color: #2c5c8f;
+  }
+  .tag.format {
+    background: #fdeee0;
+    color: #b35f1c;
+  }
+  .card h3 {
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #223148;
+  }
+  .card .jp-title {
+    font-size: 13.5px;
+    color: #8b93a0;
+    margin-top: -6px;
+  }
+  .card p.desc {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #556;
+    flex: 1;
+  }
+  .card .cta {
+    margin-top: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #ffffff;
+    background: #223148;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: fit-content;
+    transition: background 0.15s ease;
+  }
+  .card .cta:hover { background: #34495e; }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: -20px 0 40px;
+  }
+  .feature {
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .feature .ic {
+    font-size: 22px;
+    line-height: 1;
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: #eaf2fb;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .feature b { display: block; font-size: 14.5px; color: #223148; margin-bottom: 2px; }
+  .feature span { font-size: 13px; line-height: 1.5; color: #6b7480; }
+  .tag.interactive { background: #e6f5ee; color: #2f7a57; }
+
+  @media (max-width: 640px) {
+    body { padding: 12px; }
+    .wrap { padding: 16px 4px 56px; }
+    .hero { padding: 32px 24px; }
+    .hero h1 { font-size: 28px; }
+  }
+
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    font-size: 13px;
+    color: #9aa1ab;
+  }
+</style>
+</head>
+<body>
+
+
+
+<a href="../index.html" class="back-pill">
+  <span class="icon">☚</span> Back to Home
+</a>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="pill">👘 September 2026</div>
+    <h1>September Reading Collection</h1>
+<p>Three short Japanese reading passages about the Takayama Festival, a traditional autumn festival in Gifu. Learn about Japanese “matsuri”!</p>
+<div class="deco">🏮</div>
+  </div>
+
+  <div class="features">
+    <div class="feature"><div class="ic">👆</div><div><b>Tap any word</b><span>See the reading, meaning, and an example sentence.</span></div></div>
+    <div class="feature"><div class="ic">🌐</div><div><b>Sentence-by-sentence translation</b><span>Show English under every sentence, or just the one you need.</span></div></div>
+    <div class="feature"><div class="ic">🔊</div><div><b>Listen</b><span>Hear words and sentences read aloud in Japanese.</span></div></div>
+  </div>
+
+  <div class="section-label">This month's set</div>
+  <div class="section-heading">Choose a reading</div>
+
+  <div class="grid">
+
+    <div class="card">
+      <img class="thumb" src="takayama1.jpg" alt="Takayama Festival float">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Beginner</span>
+          <span class="tag format">Hiragana only</span>
+          <span class="tag interactive">Tap-to-translate</span>
+        </div>
+        <h3>Takayama Festival</h3>
+        <div class="jp-title">たかやままつり</div>
+        <p class="desc">A simple story about the Takayama Festival — big festival floats, traditional clothing, and large puppets. Written in hiragana only, perfect for early learners.</p>
+        <a class="cta" href="level1.html">Open reading →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="thumb" src="takayama2.jpg" alt="Traditional clothing at Takayama Festival">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Beginner+</span>
+          <span class="tag format">Kanji + furigana</span>
+          <span class="tag interactive">Tap-to-translate</span>
+        </div>
+        <h3>The Famous Takayama Festival</h3>
+        <div class="jp-title">有名な高山祭</div>
+        <p class="desc">A story about the famous Takayama Festival — many visitors, beautiful floats, puppets, and paper lanterns lighting up the town at night. Introduces kanji with furigana.</p>
+        <a class="cta" href="level2.html">Open reading →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="thumb" src="takayama3.jpg" alt="Takayama Festival mechanical puppet">
+      <div class="body">
+        <div class="tags">
+          <span class="tag level">Intermediate</span>
+          <span class="tag format">Kanji + furigana</span>
+          <span class="tag interactive">Tap-to-translate</span>
+        </div>
+        <h3>Takayama Festival and Japanese Culture</h3>
+        <div class="jp-title">高山祭と日本の文化</div>
+        <p class="desc">A longer passage about the festival floats, mechanical karakuri puppets, the night-time atmosphere, and a festival that has continued since long ago. Includes comprehension questions.</p>
+        <a class="cta" href="level3.html">Open reading →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>Japanese Reading Practice · September 2026</footer>
+
+</div>
+
+</body>
+</html>
